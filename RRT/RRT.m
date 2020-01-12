@@ -1,9 +1,9 @@
 %% RRT parameters
 map=im2bw(imread('dst_dilated.jpg')); % input map read from a bmp file. for new maps write the file name here
-source=[455 1314 ]; % source position in Y, X format
-goal=[266 1498]; % goal position in Y, X format
+source=[120 711 ]; % source position in Y, X format
+goal=[111 1144]; % goal position in Y, X format
 stepsize = 20;  % size of each step of the RRT
-threshold = 20; % nodes closer than this threshold are taken as almost the same
+threshold = 10; % nodes closer than this threshold are taken as almost the same
 maxFailedAttempts = 10000;
 display = true; % display of RRT
 
@@ -29,7 +29,7 @@ while failedAttempts <= maxFailedAttempts  % loop to grow RRTs
     %% selects the node in the RRT tree that is closest to qrand
     [A, I] = min( distanceCost(RRTree(:,1:2),sample) ,[],1); % find the minimum value of each column
     closestNode = RRTree(I(1),1:2);
-	
+    
     %% moving from qnearest an incremental distance in the direction of qrand
     theta = atan2(sample(1)-closestNode(1),sample(2)-closestNode(2));  % direction to extend sample to produce new node
     newPoint = double(int32(closestNode(1:2) + stepsize * [sin(theta)  cos(theta)]));
@@ -67,6 +67,7 @@ for i=1:length(path)-1, pathLength = pathLength + distanceCost(path(i,1:2),path(
 fprintf('processing time=%d \nPath Length=%d \n\n', toc, pathLength); 
 imshow(map);rectangle('position',[1 1 size(map)-1],'edgecolor','k');
 line(path(:,2),path(:,1));
+
 
 
 %% distanceCost.m
