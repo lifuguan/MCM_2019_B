@@ -19,7 +19,7 @@ sample_points_up = [
     151, 1200; 129 , 945;
     124, 1064; 111, 1144;  
     130, 864; 124, 1064
-    ];
+];
 
 % the location of hospitals
 hospitals = [
@@ -27,8 +27,10 @@ hospitals = [
     325, 1100;   % right-side coastline 
     116, 1103;   % up-side coastline 
     157, 1024;   % up-side coastline 
-    84,  506];   % left-side coastline 
+    84,  506
+];   % left-side coastline 
 
+%
 cities = [
     799,  564;  1064, 548;
     607,  523;  394,  502;

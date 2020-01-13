@@ -72,9 +72,10 @@ F | 用于中距离运输且送多个地点     | 31.6km  / 279.39pixels
 3. 遍历所有的点并画圆
 4. 查看圆环域内是否包含应该包含的医疗中心， 如果是， 遍历道路面积，并选择拥有最大值的点 **使用未膨胀的二值图**
 
-#### matlab画图
+#### MatLab画图
 1. 将 **左**， **上**， **右** 的ROI以`imadd()`形式合并成`img_highlight`
 2. 将`img_highlight`和`img`以 *3：7* 的比例叠加得到`res_img`
+![](imgs/cricle.png)
 
 
 #### OpenCV检测城市
@@ -99,3 +100,17 @@ cities = [
 ];
 ```
 3. 将城市坐标列为主要侦察目的地
+
+![](imgs/cricle_with_cities.png)
+
+#### 使用MatLab求得各城市与登陆点之间的欧氏距离
+
+1. 分配给`lander_left`的城市点:
+
+
+
+2. 分配给`lander_right`的城市点:
+
+
+3. 分配给`lander_up`的城市点:
+

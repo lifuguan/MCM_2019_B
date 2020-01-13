@@ -1,13 +1,7 @@
+B = load('dst_dilated.mat ');
 
-
-map = struct('name', 'bench_june1.mat', 'start_point', [-12.5 -5.5], 'goal_point', [7 -3.65]);
-max_iter =  9.570e3;
-is_benchmark = false;
-rand_seed = 40;
-variant = 'FNSimple2D';
-result = rrt_star(map, max_iter, is_benchmark, rand_seed, variant);
-
-function problem = rrt_star(map, max_iter, is_benchmark, rand_seed, variant)
+rrt_star(B, 10e3, 1,  5 , 4);
+function rrt_star(map, max_iter, is_benchmark, rand_seed, variant)
 %RRT_STAR -- RRT* is sampling-based algorithm, solves 
 % the problem of motion and path planning providing feasible solutions
 % taking into account the optimality of a path/motion.
@@ -48,7 +42,7 @@ if nargin < 5
     
 
         variant     = 'FNSimple2D';
-        MAP = struct('name', 'bench_june1.mat', 'start_point', [-12.5 -5.5], 'goal_point', [7 -3.65]);
+        MAP = struct('name', 'dst_dilated.mat', 'start_point', [-12.5 -5.5], 'goal_point', [7 -3.65]);
 %     variant     = 'FNRedundantManipulator';
 %     MAP = struct('name', 'bench_redundant_3.mat', 'start_point', [0 0], 'goal_point', [35 35]);
     
