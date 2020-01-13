@@ -89,8 +89,8 @@ img_highlight_up_and_left = imadd(roi_up, roi_left);
 %% mark the roads in the right circle
 roi_right = getRoiMat(img, [sample_points_right(14, 1) , sample_points_right(14, 2)], 20,200, 20);
 img_highlight = imadd(img_highlight_up_and_left, roi_right);
-K = imlincomb(0.3, img, 0.7, img_highlight);
-figure,imshow(K);
+res_img = imlincomb(0.3, img, 0.7, img_highlight);
+figure,imshow(res_img);
 
 h_up = images.roi.Circle(gca,'Center',[1200, 151],'Radius',233);
 h_left = images.roi.Circle(gca,'Center',[481, 141],'Radius',233);
