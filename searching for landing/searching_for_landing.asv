@@ -127,8 +127,7 @@ hold off;
 h_up = images.roi.Circle(gca,'Center',[1200, 151],'Radius',233);
 h_left = images.roi.Circle(gca,'Center',[481, 141],'Radius',233);
 h_right = images.roi.Circle(gca,'Center',[1336, 401],'Radius',233);
-
-
+imwrite(img,'result.jpg'); 
 
 %% extract the ROI from the original image
 function area = getRoadArea(img, landing_zone)

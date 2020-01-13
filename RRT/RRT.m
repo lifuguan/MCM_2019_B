@@ -1,42 +1,42 @@
-%% RRT parameters
 
-lander_left = [481, 141];
-lander_up = [1200, 151];
-lander_right = [1336, 401];
-
-cities = [
-    799,  564;  1064, 548;
-    607,  523;  394,  502;
-    203,  484;  838,  458;
-    123,  450;  1012, 425;
-    1328, 389;  123,  339;
-    943,  312;  1129, 285;
-    525,  279;  372,  249;
-    1483, 220;  878,  208;
-    225,  194;  1162, 194;
-    1066, 190;  1033, 157;
-    115,  118;  743,  117;
-    1145, 110;  814,  107;
-    928,   94;  1072,  88;
-    512,   82;  313,   80
+source=[455 1314 ]; % source position in Y, X format
+goal=[266 1498]; % goal position in Y, X format
+test_point=[
+    362, 1222; 266 1498
 ];
 
-map=im2bw(imread('dst_dilated.jpg')); % input map read from a bmp file. for new maps write the file name here
-source=[135 1111]; % source position in Y, X format
-goal=[243 1248]; % goal position in Y, X format
-stepsize = 15;  % size of each step of the RRT
-threshold = 12; % nodes closer than this threshold are taken as almost the same
-maxFailedAttempts = 10000;
-display = true; % display of RRT
-if display,imshow(map); rectangle('position',[1 1 size(map)-1],'edgecolor','k'); end
+map = im2bw(imread('dst_dilated.jpg'));
+map_with_color = imread('cricle.png');
 
-for i = 1:length(cities)
+if true,imshow(map_with_color);rectangle('position',[1 1 size(map)-1],'edgecolor','k'); end
+
+for i = 1:length(test_point)
+    path = rrt_path_planning(map, source, test_point(i,:), false);
+    line(path(:,2),path(:,1));
+end
+
+%%
+% rrt_path_planning - RRT path plannign function
+%
+% Syntax: path_res = rrt_path_planning(map, source, goal, display)
+% map : the binary image 
+% source : the lander zone 
+% goal : the target zone (cities or hotpitals)
+% display : (true : enable display the track) / (false : disable display the track)
+% Long description
+function path_res = rrt_path_planning(map, source, goal, display)
+
+    %% RRT parameters
+    stepsize = 15;  % size of each step of the RRT
+    threshold = 12; % nodes closer than this threshold are taken as almost the same
+    maxFailedAttempts = 10000;
+
     if ~feasiblePoint(source,map), error('source lies on an obstacle or outside map'); end
     if ~feasiblePoint(goal,map), error('goal lies on an obstacle or outside map'); end
-        
-        
+
     tic;  % tic-toc: Functions for Elapsed Time
-    RRTree = double([source  -1]); % RRT rooted at the source, representation node and parent index
+
+    RRTree = double([source -1]); % RRT rooted at the source, representation node and parent index
     failedAttempts = 0;
     counter = 0;
     pathFound = false;
@@ -74,7 +74,7 @@ for i = 1:length(cities)
     % getframe returns a movie frame, which is a structure having two fields
     if display && pathFound, line([closestNode(2);goal(2)],[closestNode(1);goal(1)]); counter = counter+1;M(counter) = getframe; end
 
-    if display, disp('path found.');  end
+    if display, disp('Path found.');  end
     if ~pathFound, error('no path found. maximum attempts reached'); end
 
     %% retrieve path from parent information
@@ -84,14 +84,13 @@ for i = 1:length(cities)
         path = [RRTree(prev,1:2); path];
         prev = RRTree(prev,3);
     end
+
+    pathLength = 0;
+    for i=1:length(path)-1, pathLength = pathLength + distanceCost(path(i,1:2),path(i+1,1:2)); end % calculate path length
+    fprintf('processing time=%d \nPath Length=%d \n\n', toc, pathLength); 
+    if display, imshow(map);rectangle('position',[1 1 size(map)-1],'edgecolor','k'); end;
+    path_res = path;
 end
-
-pathLength = 0;
-for i=1:length(path)-1, pathLength = pathLength + distanceCost(path(i,1:2),path(i+1,1:2)); end % calculate path length
-fprintf('processing time=%d \nPath Length=%d \n\n', toc, pathLength); 
-imshow(map);rectangle('position',[1 1 size(map)-1],'edgecolor','k');
-line(path(:,2),path(:,1));
-
 
 
 %% distanceCost.m
