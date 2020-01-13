@@ -1,9 +1,9 @@
 %% RRT parameters
 map=im2bw(imread('dst_dilated.jpg')); % input map read from a bmp file. for new maps write the file name here
-source=[120 711 ]; % source position in Y, X format
-goal=[111 1144]; % goal position in Y, X format
-stepsize = 20;  % size of each step of the RRT
-threshold = 10; % nodes closer than this threshold are taken as almost the same
+source=[117 1154 ]; % source position in Y, X format
+goal=[277 1248]; % goal position in Y, X format
+stepsize = 15;  % size of each step of the RRT
+threshold = 12; % nodes closer than this threshold are taken as almost the same
 maxFailedAttempts = 10000;
 display = true; % display of RRT
 

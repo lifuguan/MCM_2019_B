@@ -36,7 +36,7 @@ aircraft_model = [ 'B', 'F'];
 max_flight_distance_B = 233;
 max_flight_distance_F = 140;
 
-img = imread('dst.jpg');
+img = imread('dst_dilated.jpg');
 %% choose the landing on the up
 % for i = 1:length(sample_points_up)
 %     landing_zone = [sample_points_up(i, 1) , sample_points_up(i, 2)]; 
@@ -87,14 +87,22 @@ img_highlight_up_and_left = imadd(roi_up, roi_left);
 % end
 
 %% mark the roads in the right circle
-roi_right = getRoiMat(img, [sample_points_right(14, 1) , sample_points_right(14, 2)], 20,200, 20);
+roi_right = getRoiMat(img, [sample_points_right(12, 1) , sample_points_right(12, 2)], 20,200, 20);
 img_highlight = imadd(img_highlight_up_and_left, roi_right);
 res_img = imlincomb(0.3, img, 0.7, img_highlight);
-figure,imshow(res_img);
+
+figure,imshow(res_img), hold on;
+sita=0:0.05:2*pi; r=5;
+for i = 1:length(hospitals)
+    plot(hospitals(i, 2) + 5*cos(sita), hospitals(i, 1) + 5*sin(sita));
+    fill(hospitals(i, 2) + 5*cos(sita), hospitals(i, 1) + 5*sin(sita), 'r')
+end
+hold off;
 
 h_up = images.roi.Circle(gca,'Center',[1200, 151],'Radius',233);
 h_left = images.roi.Circle(gca,'Center',[481, 141],'Radius',233);
-h_right = images.roi.Circle(gca,'Center',[1325, 438],'Radius',233);
+h_right = images.roi.Circle(gca,'Center',[1336, 401],'Radius',233);
+
 
 %% extract the ROI from the original image
 function area = getRoadArea(img, landing_zone)
