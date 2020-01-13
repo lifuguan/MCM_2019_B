@@ -9,13 +9,9 @@ sample_points_right =  [266, 1498; 301, 1494; 325, 1462;
 
 sample_points_left = [
     103, 331; 67 , 257;
-
     125, 469; 141, 481;
-
     125, 517; 107, 545;
-
     267, 110; 341, 117;
-
     428, 92 ; 451, 120
     ];
 
@@ -37,61 +33,75 @@ hospitals = [
 aircraft_model = [ 'B', 'F'];
 
 % mission radius of the drones
-max_flight_distance_B = 465.69;
-max_flight_distance_F = 279.39;
+max_flight_distance_B = 233;
+max_flight_distance_F = 140;
 
 img = imread('dst.jpg');
-
 %% choose the landing on the up
-area_max = 0
-for i = 1:length(sample_points_up)
-    landing_zone = [sample_points_up(i, 1) , sample_points_up(i, 2)]; 
+% for i = 1:length(sample_points_up)
+%     landing_zone = [sample_points_up(i, 1) , sample_points_up(i, 2)]; 
     
-    % check if the hospital is obtained in the circle
-    if distanceCost(landing_zone, [hospitals(3,1), hospitals(3,2)]) <= 465.69 && distanceCost(landing_zone, [hospitals(4,1), hospitals(4,2)]) <= 465.69
-        % get the area of the roads
-        area = getRoadArea(img, landing_zone);
-        disp("figure " + i + " : " + area);       
-    end    
-end
+%     % check if the hospital is obtained in the circle
+%     if distanceCost(landing_zone, [hospitals(3,1), hospitals(3,2)]) <= 233 && distanceCost(landing_zone, [hospitals(4,1), hospitals(4,2)]) <= 233
+%         % get the area of the roads
+%         area = getRoadArea(img, landing_zone);
+%         disp("figure " + i + " : " + area);       
+%     end    
+% end
 
-%% mark the roads in the circle
-roi = getRoiMat(img, [sample_points_up(5, 1) , sample_points_up(5, 2)]);
-% K = imlincomb(0.4, img, 0.6, roi);
-img_highlight_up = immultiply(img, roi);
-figure, imshow(img_highlight_up);
-h = images.roi.Circle(gca,'Center',[864, 130],'Radius',465);
+%% mark the roads in the up circle
+roi_up = getRoiMat(img, [sample_points_up(1, 1) , sample_points_up(1, 2)], 0, 100, 200);
+% img_highlight_up = imdivide(img, roi_up);
+% imshow(img_highlight_up);
 
 %% delete the roads data which in the circle 
+img_without_up = imdivide(img, roi_up);
 
-img_without_up = imdivide(img, roi);
+%% choose the landing on the left
+% for i = 1:length(sample_points_left)
+%     landing_zone = [sample_points_left(i, 1) , sample_points_left(i, 2)]; 
 
-%% for the hospitals on the left
-for i = 1:length(sample_points)
-    landing_zone = [sample_points(i, 1) , sample_points(i, 2)]; 
+%     if distanceCost(landing_zone, [hospitals(5,1), hospitals(5,2)]) <= 233
+%         area = getRoadArea(img_without_up, landing_zone);
+%         disp("figure " + sample_points_left(i, 1) + " : " + area);
+%     else
+%         disp("figure " + distanceCost(landing_zone, [hospitals(5,1), hospitals(5,2)]));
+%     end
+% end
 
-    if distanceCost(landing_zone, [hospitals(1,1), hospitals(1,2)]) <= 465.69 && distanceCost(landing_zone, [hospitals(2,1), hospitals(2,2)]) <= 465.69
-        grayROI = getROI(img);
-        figure,imshow(grayROI);
-    end
-end
+%% mark the roads in the left circle
+roi_left = getRoiMat(img, [sample_points_left(4, 1) , sample_points_left(4, 2)], 200,0, 100);
+img_highlight_up_and_left = imadd(roi_up, roi_left);
 
 
 % %% for the hospitals on the right
-% for i = 1:length(sample_points)
-%     landing_zone = [sample_points(i, 1) , sample_points(i, 2)]; 
-    
+% for i = 1:length(sample_points_right)
+%     landing_zone = [sample_points_right(i, 1) , sample_points_right(i, 2)]; 
+
+%     if distanceCost(landing_zone, [hospitals(2,1), hospitals(2,2)]) <= 233 && distanceCost(landing_zone, [hospitals(1,1), hospitals(1,2)]) <= 233
+%         area = getRoadArea(img_without_up, landing_zone);
+%         disp("figure " + sample_points_right(i, 1) + " : " + area);
+%     else
+%         disp("figure " + distanceCost(landing_zone, [hospitals(5,1), hospitals(5,2)]));
+%     end
 % end
 
+%% mark the roads in the right circle
+roi_right = getRoiMat(img, [sample_points_right(14, 1) , sample_points_right(14, 2)], 20,200, 20);
+img_highlight = imadd(img_highlight_up_and_left, roi_right);
+K = imlincomb(0.3, img, 0.7, img_highlight);
+figure,imshow(K);
 
-
+h_up = images.roi.Circle(gca,'Center',[1200, 151],'Radius',233);
+h_left = images.roi.Circle(gca,'Center',[481, 141],'Radius',233);
+h_right = images.roi.Circle(gca,'Center',[1325, 438],'Radius',233);
 
 %% extract the ROI from the original image
 function area = getRoadArea(img, landing_zone)
     grayimg = rgb2gray(img);
     [imgW,imgH] = size(grayimg);
     t = linspace(0, 2*pi, 50);   % approximate circle with 50 points
-    radius = 465.69;                          % radius
+    radius = 233;                          % radius
     center = [landing_zone(1,2) landing_zone(1,1)]; % circle center
 
     % get circular mask
@@ -99,15 +109,14 @@ function area = getRoadArea(img, landing_zone)
     grayROI = immultiply(grayimg,BW);
 
     % extract the ROI image (save the calculate resources)
-    rect = [landing_zone(1, 2) - 465 0  landing_zone(1, 2) + 465 616];
+    rect = [landing_zone(1, 2) - 233 0  landing_zone(1, 2) + 233 616];
     roi = imcrop(grayROI, rect);
-
     % calculate the num of the "white" pixels in the ROI (pixel by pixel)
     area = 0;
     [roi_w, roi_h] = size(roi);
     for i = 1:roi_w
         for j = 1:roi_h
-            if roi(i, j) > 0
+            if roi(i, j) > 100
                 area = area + 1;
             end
         end
@@ -115,11 +124,11 @@ function area = getRoadArea(img, landing_zone)
 end
 
 %% extract the ROI from the original image
-function roi = getRoiMat(img, landing_zone)
+function roi = getRoiMat(img, landing_zone, r, g, b)
     grayimg = rgb2gray(img);
     [imgW,imgH] = size(grayimg);
     t = linspace(0, 2*pi, 50);   % approximate circle with 50 points
-    radius = 465.69;                          % radius
+    radius = 233;                          % radius
     center = [landing_zone(1,2) landing_zone(1,1)]; % circle center
 
     % get circular mask
@@ -129,11 +138,11 @@ function roi = getRoiMat(img, landing_zone)
     rgbmask(:,:,3) = BW;
     rgbROI = immultiply(img,rgbmask);
     % calculate the num of the "white" pixels in the ROI (pixel by pixel)
-    [roi_w, roi_h, a, b, c] = size(rgbROI);
+    [roi_w, roi_h, ch] = size(rgbROI);
     for i = 1:roi_w
         for j = 1:roi_h
-            if rgbROI(i, j) > 0
-                rgbROI(i, j, :) = [20,20,200];
+            if rgbROI(i, j) > 100
+                rgbROI(i, j, :) = [; r g b];
             end
         end
     end
