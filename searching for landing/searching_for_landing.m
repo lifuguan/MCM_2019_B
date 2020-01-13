@@ -29,6 +29,23 @@ hospitals = [
     157, 1024;   % up-side coastline 
     84,  506];   % left-side coastline 
 
+cities = [
+    799,  564;  1064, 548;
+    607,  523;  394,  502;
+    203,  484;  838,  458;
+    123,  450;  1012, 425;
+    1328, 389;  123,  339;
+    943,  312;  1129, 285;
+    525,  279;  372,  249;
+    1483, 220;  878,  208;
+    225,  194;  1162, 194;
+    1066, 190;  1033, 157;
+    115,  118;  743,  117;
+    1145, 110;  814,  107;
+    928,   94;  1072,  88;
+    512,   82;  313,   80
+];
+
 % the model of aircraft. (here we only select type 'B' and 'F')
 aircraft_model = [ 'B', 'F'];
 
@@ -97,6 +114,13 @@ for i = 1:length(hospitals)
     plot(hospitals(i, 2) + 5*cos(sita), hospitals(i, 1) + 5*sin(sita));
     fill(hospitals(i, 2) + 5*cos(sita), hospitals(i, 1) + 5*sin(sita), 'r')
 end
+
+sita=0:0.03:2*pi; r=3;
+for i = 1:length(cities)
+    plot(cities(i, 1) + 3*cos(sita), cities(i, 2) + 3*sin(sita));
+    fill(cities(i, 1) + 3*cos(sita), cities(i, 2) + 3*sin(sita), 'g')
+end
+
 hold off;
 
 h_up = images.roi.Circle(gca,'Center',[1200, 151],'Radius',233);
