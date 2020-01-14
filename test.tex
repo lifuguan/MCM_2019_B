@@ -1,6 +1,31 @@
-\documentclass[UTF8]{ctexart}  %使用中文版的article文档类型排版，并选择UTF8编码格式
-\usepackage{amsmath}  %使用宏包，这里使用的是调用公式宏包，可以调用多个宏包
-\begin{document}  %开始写文章
-文章内容            %编辑文章
-paper got accepted
-\end{document}  %结束写文章
+\documentclass{article} %article 文档
+\title{Arrangement for DroneGo}  %文章标题
+\author{Hao Li, Peisen Wang, Benjia Liu}   %作者的名称
+\date{\today}       %日期
+% 设置页面的环境,a4纸张大小，左右上下边距信息
+\usepackage[a4paper,left=10mm,right=10mm,top=15mm,bottom=15mm]{geometry} 
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% 本文旨在利用数字图像处理技术以及机器人路径规划及其轨迹生成算法，在无人机视野严重受限的情况下。完成医疗点的药品供给，城区道路覆盖侦察，偏远聚居点连通道路侦察等任务。
+This paper aims to use digital image processing , robot path planning and trajectory generation algorithms, in the case of severely limited vision of the drone. Complete medical supplies at medical sites, cover road surveillance in urban areas, and connect road reconnaissance to remote settlements.
+\end{abstract}
+
+
+1. Load the original image and convert it into the threshold image.
+
+\centerline{The range is from$
+(50,  50, 20)$ to $(150,  90, 50)$}
+
+2. 
+
+\centerline{Convolution Kernel $=\left[\begin{array}{cccccccc}{1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1} \\ {1} & {1} & {1} & {1} & {1} & {1} & {1} & {1}\end{array}\right]$}
+    
+
+
+
+\end{document}
+
+

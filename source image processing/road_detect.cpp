@@ -9,6 +9,8 @@ int main()
 	cv::Mat src = cv::imread("C:\\Users\\10027\\Pictures\\map.png");
 	cv::Mat out;
 	cv::inRange(src, lower_range, upper_range, out);
+	cv::Mat element = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(8, 8));
+	cv::dilate(out, out_dilated, element);
 	cv::imwrite("dst.jpg", out);
 	system("pause");
 	return 0;
