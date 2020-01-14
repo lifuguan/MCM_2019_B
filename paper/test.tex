@@ -576,24 +576,47 @@ City points assigned to up.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{2.png}
+    \includegraphics[scale=0.2]{2.png}
     \caption{ the City coordinates}
 \end{figure}
 
-\subsection{Path Planning And Trajectory Display}
-The idea of RRT is to quickly expand a group of tree-like paths to explore (fill) 
-most of the space and wait for opportunities to find feasible paths. The "tree" was chosen because it explores space.
+\subsubsection{Extract All the Corners On The Map}
+We use the RRT algorithm (because the RRT algorithm is more divergent than 
+RRT-connect) for path planning from $[455, 1314]$ to $[338, 120]$ and $[452, 116]$.
+Since the RRT algorithm will retrieve various possibilities in the form of 
+numbers, it will traverse all possible nodes in the exploration.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.2]{all_nodes.png}
+    \caption{The result of RRT-connect algorithm.}
+\end{figure}
+
+In this picture, we have drawn all possible road routes through matlab calculations, providing preparations for our next flight reconnaissance route selection.
+
+\subsubsection{Path Planning And Trajectory Display}
+From these city nodes that connect a route, we have selected several lines that mainly contact major cities to conduct drone reconnaissance activities
+to provide accurate video information for our rescue.
+
+The idea of RRT is to quickly expand a group of tree-like paths to explore most of the space 
+and wait for opportunities to find a feasible paths. The "tree" was chosen because it explores space.
+
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{sample_point_in_left_side_coastline.png}
     \caption{Sample points of the left side coastline obtained by RRT algorihm}
 \end{figure}   
+
+
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.5]{RRT.png}
         \caption{The result of RRT-connect algorithm.}
     \end{figure}
+
+    Among these selected routes, since some routes have a round-trip distance that greatly exceeds the maximum distance that the drone can fly and cannot return to the gathering point for charging, the drone we use is one-time.
+    Our algorithm will be shown in a later appendix.
+    
 
 \section{Drone Flight Plan}
 \subsection{Time Schedule}
