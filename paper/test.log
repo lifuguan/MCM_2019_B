@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.10)  14 JAN 2020 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.10)  14 JAN 2020 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -97,6 +97,19 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen109
 \SOUL@uldp=\dimen110
 \SOUL@ulht=\dimen111
+) (c:/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+\f@nch@headwidth=\skip44
+\f@nch@O@elh=\skip45
+\f@nch@O@erh=\skip46
+\f@nch@O@olh=\skip47
+\f@nch@O@orh=\skip48
+\f@nch@O@elf=\skip49
+\f@nch@O@erf=\skip50
+\f@nch@O@olf=\skip51
+\f@nch@O@orf=\skip52
+) (c:/texlive/2019/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 ) (c:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
  (c:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -119,21 +132,25 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
 \Gm@dimlist=\toks22
-) (c:\Users\10027\Desktop\MCM_2019_B\paper/test.aux)
+) (c:\Users\10027\Desktop\MCM_2019_B\paper/test.aux
+
+LaTeX Warning: Label `1' multiply defined.
+
+)
 \openout1 = `test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
@@ -181,6 +198,9 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count105
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -216,68 +236,154 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
  (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (c:\Users\10027\Desktop\MCM_2019_B\paper/test.toc)
+) (c:\Users\10027\Desktop\MCM_2019_B\paper/test.toc [1
+
+{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `test.toc'.
 
- (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+ [2] (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) (c:/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-) [1
-
-{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 130.
  (c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
-<threshold.png, id=20, 690.1785pt x 116.23425pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
+<threshold.png, id=16, 690.1785pt x 116.23425pt>
 File: threshold.png Graphic file (type png)
 <use threshold.png>
-Package pdftex.def Info: threshold.png  used on input line 78.
+Package pdftex.def Info: threshold.png  used on input line 137.
 (pdftex.def)             Requested size: 414.11029pt x 69.74107pt.
-<dilate.png, id=22, 685.3605pt x 115.632pt>
+<dilate.png, id=18, 685.3605pt x 115.632pt>
 File: dilate.png Graphic file (type png)
 <use dilate.png>
-Package pdftex.def Info: dilate.png  used on input line 96.
+Package pdftex.def Info: dilate.png  used on input line 155.
 (pdftex.def)             Requested size: 411.21947pt x 69.37973pt.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 108.
- (c:/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 167.
+(c:/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 108.
- [2 <c:/Users/10027/Desktop/MCM_2019_B/paper/threshold.png> <c:/Users/10027/Desktop/MCM_2019_B/paper/dilate.png>]
-<object_detection.png, id=29, 676.32675pt x 112.0185pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 167.
+ [3 <c:/Users/10027/Desktop/MCM_2019_B/paper/threshold.png>]
+<object_detection.png, id=31, 676.32675pt x 112.0185pt>
 File: object_detection.png Graphic file (type png)
 <use object_detection.png>
-Package pdftex.def Info: object_detection.png  used on input line 132.
+Package pdftex.def Info: object_detection.png  used on input line 191.
 (pdftex.def)             Requested size: 405.79918pt x 67.2116pt.
- [3 <c:/Users/10027/Desktop/MCM_2019_B/paper/object_detection.png>] (c:\Users\10027\Desktop\MCM_2019_B\paper/test.aux) ) 
+<3.jpg, id=32, 1427.3325pt x 572.1375pt>
+File: 3.jpg Graphic file (type jpg)
+<use 3.jpg>
+Package pdftex.def Info: 3.jpg  used on input line 199.
+(pdftex.def)             Requested size: 284.52756pt x 114.05006pt.
+ [4 <c:/Users/10027/Desktop/MCM_2019_B/paper/dilate.png> <c:/Users/10027/Desktop/MCM_2019_B/paper/object_detection.png> <c:/Users/10027/Desktop/MCM_2019_B/paper/3.jpg>]
+<2.png, id=38, 1310.64656pt x 550.30594pt>
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 252.
+(pdftex.def)             Requested size: 284.52756pt x 119.46385pt.
+ [5] [6 <c:/Users/10027/Desktop/MCM_2019_B/paper/2.png (PNG copy)>]
+<99.png, id=47, 699.36281pt x 388.45125pt>
+File: 99.png Graphic file (type png)
+<use 99.png>
+Package pdftex.def Info: 99.png  used on input line 333.
+(pdftex.def)             Requested size: 419.62093pt x 233.07254pt.
+
+Overfull \hbox (269.47263pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/n/10 point are not the ori-gin, the length of the space is ex-pressed as: []
+ []
+
+[7 <c:/Users/10027/Desktop/MCM_2019_B/paper/99.png>] [8]
+File: 3.jpg Graphic file (type jpg)
+<use 3.jpg>
+Package pdftex.def Info: 3.jpg  used on input line 458.
+(pdftex.def)             Requested size: 285.46144pt x 114.42546pt.
+<61.png, id=56, 286.06876pt x 101.88063pt>
+File: 61.png Graphic file (type png)
+<use 61.png>
+Package pdftex.def Info: 61.png  used on input line 474.
+(pdftex.def)             Requested size: 200.24675pt x 71.31595pt.
+<62.png, id=57, 285.065pt x 149.55875pt>
+File: 62.png Graphic file (type png)
+<use 62.png>
+Package pdftex.def Info: 62.png  used on input line 499.
+(pdftex.def)             Requested size: 199.54413pt x 104.6904pt.
+ [9 <c:/Users/10027/Desktop/MCM_2019_B/paper/61.png>]
+<63.png, id=62, 289.08pt x 138.5175pt>
+File: 63.png Graphic file (type png)
+<use 63.png>
+Package pdftex.def Info: 63.png  used on input line 523.
+(pdftex.def)             Requested size: 202.35461pt x 96.96158pt.
+<64.png, id=63, 1310.64656pt x 550.30594pt>
+File: 64.png Graphic file (type png)
+<use 64.png>
+Package pdftex.def Info: 64.png  used on input line 545.
+(pdftex.def)             Requested size: 393.197pt x 165.09305pt.
+<65.png, id=64, 207.77625pt x 238.8925pt>
+File: 65.png Graphic file (type png)
+<use 65.png>
+Package pdftex.def Info: 65.png  used on input line 561.
+(pdftex.def)             Requested size: 145.44237pt x 167.2236pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <c:/Users/10027/Desktop/MCM_2019_B/paper/62.png> <c:/Users/10027/Desktop/MCM_2019_B/paper/63.png> <c:/Users/10027/Desktop/MCM_2019_B/paper/64.png (PNG copy)>]
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 579.
+(pdftex.def)             Requested size: 393.197pt x 165.09305pt.
+<sample_point_in_left_side_coastline.png, id=70, 799.3062pt x 465.9006pt>
+File: sample_point_in_left_side_coastline.png Graphic file (type png)
+<use sample_point_in_left_side_coastline.png>
+Package pdftex.def Info: sample_point_in_left_side_coastline.png  used on input line 589.
+(pdftex.def)             Requested size: 239.7937pt x 139.77126pt.
+<RRT.png, id=71, 968.418pt x 205.9695pt>
+File: RRT.png Graphic file (type png)
+<use RRT.png>
+Package pdftex.def Info: RRT.png  used on input line 594.
+(pdftex.def)             Requested size: 484.20781pt x 102.98448pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+AED: lastpage setting LastPage
+[11 <c:/Users/10027/Desktop/MCM_2019_B/paper/65.png> <c:/Users/10027/Desktop/MCM_2019_B/paper/sample_point_in_left_side_coastline.png>] [12 <c:/Users/10027/Desktop/MCM_2019_B/paper/RRT.png>] (c:\Users\10027\Desktop\MCM_2019_B\paper/test.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4745 strings out of 492623
- 63424 string characters out of 6133290
- 344571 words of memory out of 5000000
- 8587 multiletter control sequences out of 15000+600000
+ 4966 strings out of 492623
+ 66281 string characters out of 6133290
+ 342412 words of memory out of 5000000
+ 8789 multiletter control sequences out of 15000+600000
  12423 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,58p,870b,1545s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on c:\Users\10027\Desktop\MCM_2019_B\paper/test.pdf (3 pages, 489766 bytes).
+ 41i,14n,58p,870b,1633s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on c:\Users\10027\Desktop\MCM_2019_B\paper/test.pdf (12 pages, 1990643 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

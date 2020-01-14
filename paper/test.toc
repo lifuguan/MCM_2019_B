@@ -1,8 +1,36 @@
-\contentsline {section}{\numberline {1}}{1}% 
-\contentsline {subsection}{\numberline {1.1}ROI Extract And Map Established}{1}% 
-\contentsline {subsubsection}{\numberline {1.1.1}The ratio of the image between the real world}{1}% 
-\contentsline {subsubsection}{\numberline {1.1.2}Threshold The Image}{2}% 
-\contentsline {subsubsection}{\numberline {1.1.3}Dilated The Image}{2}% 
-\contentsline {subsubsection}{\numberline {1.1.4}Detct And Extract The Cities Location}{2}% 
-\contentsline {section}{\numberline {2}}{3}% 
-\contentsline {subsection}{\numberline {2.1}Path Planning}{3}% 
+\contentsline {section}{\numberline {1}Introduction}{2}% 
+\contentsline {subsection}{\numberline {1.1}Background}{2}% 
+\contentsline {paragraph}{}{2}% 
+\contentsline {subsection}{\numberline {1.2}Restatement}{2}% 
+\contentsline {paragraph}{}{2}% 
+\contentsline {section}{\numberline {2}Assumptions and Justifications}{2}% 
+\contentsline {paragraph}{}{2}% 
+\contentsline {section}{\numberline {3}Notations}{3}% 
+\contentsline {section}{\numberline {4}Model Establishment}{3}% 
+\contentsline {paragraph}{}{3}% 
+\contentsline {subsection}{\numberline {4.1}ROI Extract And Map Established}{3}% 
+\contentsline {subsubsection}{\numberline {4.1.1}The ratio of the image between the real world}{3}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Threshold The Image}{3}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Dilated The Image}{3}% 
+\contentsline {subsubsection}{\numberline {4.1.4}Detct And Extract The Cities Location}{3}% 
+\contentsline {subsection}{\numberline {4.2}Related analysis of hospitals and drones}{4}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Analysis of hospital location and material needs}{4}% 
+\contentsline {paragraph}{}{4}% 
+\contentsline {paragraph}{}{5}% 
+\contentsline {paragraph}{}{5}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Comparison of drones}{5}% 
+\contentsline {paragraph}{}{5}% 
+\contentsline {subsubsection}{\numberline {4.2.3}selection of drones}{5}% 
+\contentsline {paragraph}{}{5}% 
+\contentsline {subsection}{\numberline {4.3}Container packing design}{5}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Problem Description}{6}% 
+\contentsline {paragraph}{}{6}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Model assumptions}{6}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Model building}{6}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Solving Algorithm}{6}% 
+\contentsline {subsection}{\numberline {4.4}Drone flight path selection}{9}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Selection of container placement location}{9}% 
+\contentsline {subsection}{\numberline {4.5}Path Planning And Trajectory Display}{11}% 
+\contentsline {section}{\numberline {5}Drone Flight Plan}{12}% 
+\contentsline {subsection}{\numberline {5.1}Time Schedule}{12}% 
+\contentsline {section}{\numberline {6}Weakness}{12}% 
