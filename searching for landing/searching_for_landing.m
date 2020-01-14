@@ -30,7 +30,7 @@ hospitals = [
     84,  506
 ];   % left-side coastline 
 
-%
+% the location of cities
 cities = [
     799,  564;  1064, 548;
     607,  523;  394,  502;
