@@ -54,15 +54,12 @@ int main()
 	Mat cimg;
 	medianBlur(src, cimg, 5);
 	GaussianBlur(cimg, cimg, Size(9, 9), 2, 2);
-	//   medianBlur(cimg, cimg, 5);
 	Canny(cimg, cimg, 10, 250, 5);
-	
-	vector<vector<Point>>cnts;//获取了一堆又一堆点
+	vector<vector<Point>>cnts;
 	findContours(cimg, cnts, RETR_EXTERNAL, CHAIN_APPROX_NONE);
-
 	for (int i = 0; i < cnts.size(); i++)
 	{
-		vector<Point> cnts_single = cnts[i];//获取了上面一堆点中的一个点
+		vector<Point> cnts_single = cnts[i];
 		if (cnts_single.size() > 0)
 		{
 			vector<Point> approx;
@@ -71,21 +68,11 @@ int main()
 			int cX, cY;
 			if (M.m10 != 0)
 			{
-				//表示图像重心
 				cX = int((M.m10 / M.m00));
 				cY = int((M.m01 / M.m00));
 				cout << cX << ", " << cY << endl;
 			}
-			else
-			{
-				cX = cY = 0;
-			}
-			putText(cimg, IntToStr(cX) + " , " + IntToStr(cY), Point(cX, cY), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 0, 255), 1);  //质心位置
-
-		}
-		else
-		{
-			//printf("too fucking small %d\n", cnts_single.size());
+			putText(cimg, IntToStr(cX) + " , " + IntToStr(cY), Point(cX, cY), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(255, 0, 255), 1);  
 		}
 	}
 
